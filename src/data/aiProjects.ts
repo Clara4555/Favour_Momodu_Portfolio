@@ -1,7 +1,5 @@
 import baddieVideoOne from '@/Project-images/ai-images/HOW TO BE FELT WITHOUT BEING LOUD.mp4';
 import baddieVideoTwo from '@/Project-images/ai-images/Boundaries Over Approval (1).png';
-import fearverseVideoOne from '@/Project-images/ai-images/Tales Of The Red Hand edit.mp4';
-import fearverseVideoTwo from '@/Project-images/ai-images/Tales Of The Red Hand Episode 2 .mp4';
 import elevationRestaurantVideo from '@/Project-images/ai-images/Elevation  Restaurant Ai Ad.mp4';
 
 export interface AIProject {
@@ -12,6 +10,10 @@ export interface AIProject {
   tools: string[];
   workflow: string[];
   videos?: string[];
+  links?: {
+    instagram?: string;
+    youtube?: string;
+  };
   featured: boolean;
 }
 
@@ -25,6 +27,9 @@ export const aiProjects: AIProject[] = [
     tools: ['ChatGPT', 'Google Gemini', 'Grok Video Generator', 'Google Flow Video Generator', 'Canva', 'CapCut'],
     workflow: ['Idea', 'Concept', 'Prompt', 'Generate', 'Refine', 'Final Creation'],
     videos: [baddieVideoTwo, baddieVideoOne],
+    links: {
+      instagram: 'https://www.instagram.com/baddieetiquette?stkn=cWJ0eGxocTdjZDk2&utm_source=qr',
+    },
     featured: true,
   },
   {
@@ -35,7 +40,7 @@ export const aiProjects: AIProject[] = [
       'A faceless storytelling experiment built around suspense, voice, atmosphere, and cultural symbolism. The project uses AI-assisted scripting, visual planning, voice direction, and narrative editing to turn the Red Hand series into a mood-driven creative world.',
     tools: ['ChatGPT', 'Google Gemini', 'ElevenLabs', 'Canva', 'CapCut'],
     workflow: ['Concept', 'Story', 'Script', 'Voice', 'Visuals', 'Final content'],
-    videos: [fearverseVideoOne, fearverseVideoTwo],
+    videos: ['https://www.youtube.com/@FearVerseStories'],
     featured: true,
   },
   {
