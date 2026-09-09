@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion';
-import { Lightbulb, Wand2, FileText, Cpu, Sparkles, Check, Play } from 'lucide-react';
+import { Lightbulb, Wand2, FileText, Cpu, Sparkles, Check, Play, Instagram } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { PageHeader } from '@/components/PageHeader';
 import { Reveal, Stagger, StaggerItem } from '@/components/animations';
@@ -129,6 +129,20 @@ export function AILab() {
                   </div>
                 </div>
 
+                {project.id === 'baddie-etiquette' && project.links?.instagram && (
+                  <div className="mt-6">
+                    <a
+                      href={project.links.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full border border-accent-300/60 px-4 py-2 text-xs font-mono uppercase tracking-[0.2em] text-accent-300 transition-colors hover:bg-accent-300/10 hover:text-accent-200"
+                    >
+                      <Instagram className="h-4 w-4" />
+                      <span>Baddie.Etiquette Instagram</span>
+                    </a>
+                  </div>
+                )}
+
                 {/* Video Samples */}
                 {project.videos && project.videos.length > 0 && (
                   <div className="mt-6">
@@ -138,12 +152,33 @@ export function AILab() {
                     <div className="grid gap-4 sm:grid-cols-2">
                       {project.videos.map((video, idx) => {
                         const isVideoAsset = video.toLowerCase().endsWith('.mp4') || video.toLowerCase().endsWith('.webm');
+                        const isYouTubeLink = video.toLowerCase().includes('youtube.com') || video.toLowerCase().includes('youtu.be');
                         const isRestaurantProject = project.id === 'elevation-restaurant-ai-advert';
 
                         return (
                           <div key={idx} className="relative overflow-hidden rounded-xl border border-border bg-bg-elevated">
                             <div className={isRestaurantProject ? 'aspect-[9/16]' : 'aspect-video'}>
-                              {isVideoAsset ? (
+                              {isYouTubeLink ? (
+                                <a
+                                  href={video}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="group flex h-full w-full items-center justify-center bg-bg-surface/80 transition-colors duration-300 hover:bg-bg-elevated"
+                                  aria-label="Open FearVerse on YouTube"
+                                >
+                                  <div className="flex flex-col items-center justify-center gap-3 px-6 text-center">
+                                    <span className="flex h-14 w-14 items-center justify-center rounded-full border border-accent-300/60 bg-bg-surface text-accent-300">
+                                      <Play className="h-5 w-5 fill-current" />
+                                    </span>
+                                    <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-text-secondary">
+                                      Watch on YouTube
+                                    </span>
+                                    <span className="text-xs text-text-muted">
+                                      FearVerseStories
+                                    </span>
+                                  </div>
+                                </a>
+                              ) : isVideoAsset ? (
                                 <video
                                   src={video}
                                   controls
