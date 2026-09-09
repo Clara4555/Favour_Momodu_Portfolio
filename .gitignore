@@ -54,7 +54,7 @@ coverage/
 *.mp4
 
 # Portfolio video that must be included in the build
-!src/Project-images/ai-images/HOW TO BE FELT WITHOUT BEING LOUD.mp4
+# !src/Project-images/ai-images/HOW TO BE FELT WITHOUT BEING LOUD.mp4
 *.mov
 *.webm
 *.mkv
@@ -62,5 +62,3 @@ coverage/
 # Portfolio videos that need to be included
 !src/Project-images/mjahome.mp4
 !src/Project-images/touchbydebby.mp4
-!src/Project-images/ai-images/Elevation  Restaurant Ai Ad.MP4
-!src/Project-images/ai-images/Elevation  Restaurant Ai Ad.MP4/*.mp4
