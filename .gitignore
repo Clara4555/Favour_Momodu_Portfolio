@@ -58,3 +58,4 @@ coverage/
 *.mov
 *.webm
 *.mkv
+!src/Project-images/ai-images/student-project/*.mp4
