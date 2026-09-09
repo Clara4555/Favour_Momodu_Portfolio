@@ -52,6 +52,9 @@ coverage/
 .npm/
 # Large media files
 *.mp4
+
+# Portfolio video that must be included in the build
+!src/Project-images/ai-images/HOW TO BE FELT WITHOUT BEING LOUD.mp4
 *.mov
 *.webm
 *.mkv
