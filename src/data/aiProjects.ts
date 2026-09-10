@@ -35,6 +35,9 @@ export const aiProjects: AIProject[] = [
     ],
     workflow: ['Idea', 'Concept', 'Prompt', 'Generate', 'Refine', 'Final Creation'],
     videos: [baddieVideoTwo],
+    links: {
+      instagram: 'https://www.instagram.com/baddieetiquette?stkn=cWJ0eGxocTdjZDk2&utm_source=qr',
+    },
     featured: true,
   },
   {
@@ -69,6 +72,7 @@ export const aiProjects: AIProject[] = [
       'Video generation',
       'Final campaign',
     ],
+    videos: [elevationRestaurantVideo],
     featured: true,
   },
 ];

@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -9,12 +10,16 @@ interface ProjectCardProps {
   variant?: 'featured' | 'standard';
 }
 
-export function ProjectCard({ project, index = 0, variant = 'standard' }: ProjectCardProps) {
+export const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(function ProjectCard(
+  { project, index = 0, variant = 'standard' },
+  ref,
+) {
   const isFeatured = variant === 'featured';
 
   if (isFeatured) {
     return (
       <motion.div
+        ref={ref}
         layout
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -89,6 +94,7 @@ export function ProjectCard({ project, index = 0, variant = 'standard' }: Projec
 
   return (
     <motion.div
+      ref={ref}
       layout
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -149,4 +155,4 @@ export function ProjectCard({ project, index = 0, variant = 'standard' }: Projec
       </Link>
     </motion.div>
   );
-}
+});
