@@ -1,4 +1,7 @@
 import baddieVideoTwo from '@/Project-images/ai-images/Boundaries Over Approval (1).png';
+import fearverseVideoOne from '@/Project-images/ai-images/Tales Of The Red Hand edit.mp4';
+import fearverseVideoTwo from '@/Project-images/ai-images/Tales Of The Red Hand Episode 2 .mp4';
+import elevationRestaurantVideo from '@/Project-images/ai-images/Elevation  Restaurant Ai Ad.mp4';
 
 export interface AIProject {
   id: string;
@@ -31,11 +34,7 @@ export const aiProjects: AIProject[] = [
       'CapCut',
     ],
     workflow: ['Idea', 'Concept', 'Prompt', 'Generate', 'Refine', 'Final Creation'],
-    videos: [baddieVideoTwo],
-    links: {
-      instagram:
-        'https://www.instagram.com/baddieetiquette?stkn=cWJ0eGxocTdjZDk2&utm_source=qr',
-    },
+    videos: [baddieVideoTwo, baddieVideoOne],
     featured: true,
   },
   {
