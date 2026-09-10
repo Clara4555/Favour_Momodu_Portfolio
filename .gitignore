@@ -50,8 +50,3 @@ coverage/
 
 # Package manager debug files
 .npm/
-# Large media files
-*.mp4
-*.mov
-*.webm
-*.mkv
