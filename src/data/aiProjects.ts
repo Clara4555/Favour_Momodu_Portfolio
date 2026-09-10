@@ -34,7 +34,7 @@ export const aiProjects: AIProject[] = [
       'CapCut',
     ],
     workflow: ['Idea', 'Concept', 'Prompt', 'Generate', 'Refine', 'Final Creation'],
-    videos: [baddieVideoTwo, baddieVideoOne],
+    videos: [baddieVideoTwo],
     featured: true,
   },
   {
