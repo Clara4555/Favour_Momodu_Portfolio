@@ -1,6 +1,6 @@
 ﻿import { useEffect, useRef, useState } from 'react';
 import { useReducedMotion } from 'framer-motion';
-import profileImage from '../Project-images/ChatGPT Image Sep 18, 2026, 07_20_27 PM.png';
+import profileImage from '../Project-images/ChatGPT_Image_Sep_18__2026__07_20_27_PM-removebg-preview.png';
 
 export function HeroVisual() {
   const ref = useRef<HTMLDivElement>(null);
