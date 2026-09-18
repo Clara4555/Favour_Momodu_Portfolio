@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Code, Sparkles, Share2 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { Reveal, Stagger, StaggerItem } from '@/components/animations';
+import aboutBanner from '../Project-images/ChatGPT Image Sep 18, 2026, 07_39_35 PM.png';
 
 const principles = [
   {
@@ -35,27 +36,39 @@ export function About() {
     <>
       <SEO title="About" description="About Favour Momodu — Frontend Developer, AI Creative, and Technology Educator working at the intersection of technology, creativity, artificial intelligence, and education." />
 
-      {/* Hero */}
-      <section className="container-page pt-32 pb-16 sm:pt-40 lg:pt-44">
+      <section className="relative isolate w-full overflow-hidden pt-24 sm:pt-28 lg:pt-32">
         <Reveal>
-          <span className="section-label">About Favour</span>
+          <div className="relative h-[430px] w-full overflow-hidden sm:h-[520px] lg:h-[660px]">
+            <img
+              src={aboutBanner}
+              alt="Favour Momodu banner"
+              className="h-full w-full object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-bg-ink-950/75 via-bg-ink-950/20 to-transparent" />
+          </div>
         </Reveal>
-        <Reveal delay={0.1}>
-          <h1 className="mt-4 text-display-xl text-gradient">I'm Favour.</h1>
-        </Reveal>
-        <Reveal delay={0.2}>
-          <p className="mt-6 text-display-sm font-display font-medium text-text-secondary">
-            Frontend Developer. AI Creative. Technology Educator.
-          </p>
-        </Reveal>
-        <Reveal delay={0.3}>
-          <p className="mt-8 max-w-2xl text-lg text-text-secondary leading-relaxed">
-            My work sits at the intersection of technology, creativity, artificial intelligence,
-            and education. I build digital experiences, explore what AI can create, and teach
-            what I learn along the way. These aren't separate interests — they're parts of the
-            same practice, each one strengthening the others.
-          </p>
-        </Reveal>
+
+        <div className="container-page pb-16 pt-10 sm:pt-12">
+          <Reveal delay={0.1}>
+            <span className="section-label">About Favour</span>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <h1 className="mt-4 text-display-xl text-gradient">I'm Favour.</h1>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <p className="mt-6 text-display-sm font-display font-medium text-text-secondary">
+              Frontend Developer. AI Creative. Technology Educator.
+            </p>
+          </Reveal>
+          <Reveal delay={0.25}>
+            <p className="mt-8 max-w-3xl text-lg text-text-secondary leading-relaxed">
+              My work sits at the intersection of technology, creativity, artificial intelligence,
+              and education. I build digital experiences, explore what AI can create, and teach
+              what I learn along the way. These aren't separate interests — they're parts of the
+              same practice, each one strengthening the others.
+            </p>
+          </Reveal>
+        </div>
       </section>
 
       {/* Professional Philosophy */}
